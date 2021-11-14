@@ -1,0 +1,2945 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Bangers', cursive;
+    cursor: url(img/cursor.png), auto;
+}
+
+section {
+    display: none;
+    position: absolute;
+
+}
+
+section.player-statistics {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2.5vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+    z-index: 5;
+}
+
+section.player-statistics.active {
+    display: block;
+}
+
+.player-statistics p.character {
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    transform: translateX(-50%);
+    width: 10vw;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    line-height: 4vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+    transition: 0.3s;
+}
+
+.player-statistics p.character:hover {
+    font-size: 2.4vw;
+}
+
+.player-statistics p.exp {
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5vw;
+    transition: 0.3s;
+}
+
+.player-statistics p.exp:hover {
+    font-size: 1.7vw;
+}
+
+p.exp span {
+    color: blue;
+}
+
+.player-statistics p.lvl {
+    position: absolute;
+    right: 25.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5vw;
+    transition: 0.3s;
+}
+
+.player-statistics p.lvl:hover {
+    font-size: 1.7vw;
+}
+
+p.lvl span {
+    color: blueviolet;
+}
+
+.player-statistics p.money {
+    position: absolute;
+    left: -9.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9vw;
+    height: 2.5vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.player-statistics p.money:hover {
+    font-size: 1.7vw;
+}
+
+p.money img {
+    position: absolute;
+    left: 0.25vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+}
+
+p.money span {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2.2vw;
+    font-size: 1.5vw;
+}
+
+.player-statistics p.atack {
+    position: absolute;
+    left: 25.25vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5vw;
+    transition: 0.3s;
+}
+
+.player-statistics p.atack:hover {
+    font-size: 1.7vw;
+}
+
+p.atack span {
+    color: yellow;
+}
+
+.player-statistics p.crit {
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5vw;
+    transition: 0.3s;
+}
+
+.player-statistics p.crit:hover {
+    font-size: 1.7vw;
+}
+
+p.crit span {
+    color: red;
+}
+
+
+
+
+div.music-volume {
+    /*    display: none;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.7vw;
+    height: 2.5vw;
+    padding: 1vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    z-index: 5;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+div.music-volume:hover {
+    width: 16.4vw;
+}
+
+.music-volume div.music-close {
+    position: absolute;
+    left: 16vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.music-close img {
+    width: 100%;
+}
+
+.music-close img:hover {
+    animation: pulse3 0.5s linear infinite;
+}
+
+.music-volume img.music-value {
+    position: absolute;
+    left: 0.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.music-volume img.music-value:hover {
+    animation: pulse5 0.5s linear infinite;
+}
+
+.music-volume div.music-volume-points {
+    position: absolute;
+    left: 2.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13vw;
+    height: 0.8vw;
+    border: 2px solid #ffb700;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.music-volume-point {
+    width: 3px;
+    height: 100%;
+    background-color: #ffb700;
+}
+
+section.outside {
+    /*    display: block;*/
+    width: 100%;
+    height: 100%;
+    background-image: url(img/outside.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.outside div {
+    position: absolute;
+}
+
+.outside div.house,
+.outside div.battle,
+.outside div.item-shop {
+    width: 8vw;
+    height: 8vw;
+}
+
+.outside div.house {
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 50%);
+}
+
+.outside div.battle {
+    right: 10%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.outside div.item-shop {
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outside div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.outside div img:hover {
+    animation: pulse 0.5s linear infinite;
+}
+
+section.curtain {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+section.start {
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 95%;
+    background-color: rgba(20, 20, 20, 1);
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.start h1 {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    color: blueviolet;
+    text-align: center;
+}
+
+.start div {
+    position: absolute;
+    top: 55%;
+    width: 45%;
+    height: 80%;
+}
+
+.start div.asuna-img {
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.start div.kirito-img {
+    right: 25%;
+    transform: translate(50%, -50%);
+}
+
+.asuna-img img,
+.kirito-img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+}
+
+.start img.asuna:hover {
+    animation: pulse 0.8s infinite linear;
+}
+
+.start img.kirito:hover {
+    animation: pulse 0.8s infinite linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  HOME  */
+
+section.home {
+    /*    display: block;*/
+    width: 100%;
+    height: 100%;
+    background-image: url(img/home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home img.main-character {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+}
+
+.home div.skins,
+.home div.statistics,
+.home div.equipment,
+.home div.achievements,
+.home div.upgrade,
+.home div.artifacts {
+    position: absolute;
+    transform: translate(50%, -50%);
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background-color: black;
+    border: 3px solid #ffb700;
+    box-shadow: 0 0 0.4vw 0.5vw black;
+    transition: 0.15s linear;
+}
+
+.home div.skins {
+    right: 25%;
+    top: 25%;
+}
+
+.home div.statistics {
+    right: 20%;
+    top: 55%;
+}
+
+.home div.equipment {
+    right: 75%;
+    top: 25%;
+}
+
+.home div.achievements {
+    right: 25%;
+    top: 85%;
+}
+
+.home div.upgrade {
+    right: 75%;
+    top: 85%;
+}
+
+.home div.artifacts {
+    right: 80%;
+    top: 55%;
+}
+
+.home div.skins:hover,
+.home div.statistics:hover,
+.home div.equipment:hover,
+.home div.achievements:hover,
+.home div.upgrade:hover,
+.home div.artifacts:hover {
+    /*    box-shadow: 0 0 0.8vw 1vw black;*/
+    border: 3px solid blueviolet;
+    transform: scale(1.1) translate(45%, -45%);
+}
+
+.home div.skins img,
+.home div.statistics img,
+.home div.equipment img,
+.home div.achievements img,
+.home div.upgrade img,
+.home div.artifacts img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+}
+
+.home div.home-curtain {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+.home div.home-curtain.active {
+    display: block;
+}
+
+
+
+
+
+
+
+.home article {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 54.5%;
+    transform: translate(-50%, -50%);
+    width: 96%;
+    height: 87%;
+    padding: 1.5vw 3vw 1.5vw 1.5vw;
+    background-color: #202020;
+    border-radius: 20px;
+}
+
+div.scroll-bar {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: 15px;
+}
+
+div.scroll-bar::-webkit-scrollbar {
+    width: 10px;
+}
+
+div.scroll-bar::-webkit-scrollbar-track {
+    background: rgba(00, 00, 00, 0);
+}
+
+div.scroll-bar::-webkit-scrollbar-thumb {
+    background: #00eaff;
+    border-radius: 20px;
+}
+
+div.skins-close,
+div.statistics-close,
+div.equipment-close,
+div.fight-close,
+div.achievements-close,
+div.upgrade-close,
+div.artifacts-close {
+    position: fixed;
+    right: 1.8vw;
+    top: 1.8vw;
+    transform: translate(50%, -50%);
+    width: 2vw;
+    height: 2vw;
+}
+
+div.skins-close img,
+div.statistics-close img,
+div.equipment-close img,
+div.fight-close img,
+div.achievements-close img,
+div.upgrade-close img,
+div.artifacts-close img {
+    width: 100%;
+}
+
+div.skins-close img:hover,
+div.statistics-close img:hover,
+div.equipment-close img:hover,
+div.fight-close img:hover,
+div.achievements-close img:hover,
+div.upgrade-close img:hover,
+div.artifacts-close img:hover {
+    animation: pulse3 0.5s linear infinite;
+}
+
+.skins div.available-skins,
+.skins div.skins-to-buy {
+    background-color: #101010;
+    border-radius: 20px;
+    padding: 2vw 1vw 0;
+}
+
+.skins div.available-skins {
+    margin-bottom: 3vw;
+}
+
+div.available-skins h2,
+div.skins-to-buy h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+}
+
+div.available-skins div.skins-container,
+div.skins-to-buy div.skins-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.skins-container div.single-skin,
+div.skins-container div.single-skin {
+    position: relative;
+    flex-basis: 17%;
+    height: 40vh;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    margin: 0 1.3vw 2.6vw;
+    background-color: #303030;
+    overflow: hidden;
+}
+
+div.single-skin img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.single-skin button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5vw;
+    border: none;
+    outline: none;
+    background-color: rgba(10, 10, 10, 0.7);
+    color: white;
+    cursor: url(img/cursor.png), auto;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.single-skin:hover button,
+.single-skin:hover span {
+    opacity: 1;
+}
+
+.single-skin span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 4vw 0.5vw;
+    color: white;
+    text-align: center;
+    line-height: 3vw;
+    font-size: 2vw;
+    background-color: rgba(10, 10, 10, 0.6);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.statistics h2 {
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    color: white;
+    font-size: 4vw;
+    margin-bottom: 1.5vw;
+}
+
+.statistics div.stats-statistics {
+    flex-basis: 48.3%;
+    min-height: calc(100% - 6.5vw);
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    padding: 2vw 2vw 1vw;
+    font-size: 1.8vw;
+    color: white;
+    background-color: #282828;
+}
+
+.stats-statistics p {
+    height: 4vw;
+    line-height: 4vw;
+    padding: 0 2vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: black;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.stats-container div.stats-statistics {
+    line-height: 170%;
+}
+
+div.stats-statistics p span {
+    color: #ffb700;
+    width: 50vw;
+}
+
+
+
+
+
+
+div.eq-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.eq-container div.eq-character {
+    position: relative;
+    width: 25vw;
+    height: 100%;
+    padding: 2vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+}
+
+.eq-character img {
+    position: absolute;
+    left: 50%;
+    top: 41.5%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 4vw);
+    max-height: calc(100% - 10vw);
+    background-color: #202020;
+    border-radius: 15px;
+}
+
+.eq-character h2 {
+    position: absolute;
+    left: 50%;
+    bottom: 2vw;
+    transform: translate(-50%, 0);
+    width: calc(100% - 4vw);
+    height: 4vw;
+    padding: 0.5vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    background-color: #202020;
+}
+
+.eq-container div.eq-character-items {
+    width: calc(100% - 28vw);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+div.eq-character-items::-webkit-scrollbar {
+    width: 10px;
+}
+
+div.eq-character-items::-webkit-scrollbar-track {
+    background: rgba(00, 00, 00, 0);
+}
+
+div.eq-character-items::-webkit-scrollbar-thumb {
+    background: #00eaff;
+    /*    border: 1px solid black;*/
+    border-radius: 20px;
+}
+
+.eq-character-items div.weapon {
+    height: 15.5vw;
+    padding: 1vw 2vw 2vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    margin-bottom: 3vw;
+}
+
+.eq-character-items div.weapon h2 {
+    margin-bottom: 1vw;
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.weapon div.weapon-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weapon-flex div.choosed-weapon {
+    width: 9vw;
+    height: 9vw;
+    padding: 1vw;
+    border-radius: 15px;
+    background-color: #101010;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+}
+
+.choosed-weapon img {
+    width: 100%;
+}
+
+.weapon-flex p {
+    width: calc(100% - 10vw);
+    padding-left: 3vw;
+    line-height: 3vw;
+    font-size: 1.8vw;
+    color: white;
+}
+
+.eq-character-items div.eq-equipment {
+    min-height: calc(100% - 18.5vw);
+    padding: 2vw 1vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    display: flex;
+    /*    justify-content: space-between;*/
+    flex-wrap: wrap;
+}
+
+.eq-equipment div.eq-item {
+    position: relative;
+    flex-basis: 7.7vw;
+    height: 7.7vw;
+    padding: 1vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    margin: 0 1vw 2vw;
+    background-color: #202020;
+}
+
+.eq-equipment div.eq-item:hover {
+    background-color: #101010;
+    box-shadow: 0 0 0.125vw 0.125vw white;
+}
+
+.eq-equipment div.eq-item:hover img {
+    animation: hovered-item 0.6s linear infinite;
+}
+
+.eq-item img {
+    width: 100%;
+}
+
+.eq-item span.eq-desc {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+    width: 11vw;
+    padding: 1vw;
+    background-color: #101010;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.1vw;
+}
+
+.eq-item span.eq-desc span.sword-name2,
+.upgrade-item span.upgrade-desc span.sword-name2,
+.start-item-sword span.sword-name2 {
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    color: #ffb700;
+    margin-bottom: 0.5vw;
+}
+
+.eq-item:hover span.eq-desc {
+    display: block;
+}
+
+.eq-item span.eq-desc:hover {
+    display: none;
+}
+
+span.eq-desc span.atk {
+    color: yellow;
+}
+
+span.eq-desc span.crit {
+    color: red;
+}
+
+
+
+
+.artifacts h1 {
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    color: white;
+}
+
+.artifacts div.artifacts-container {
+    height: calc(100% - 7vw);
+    padding: 2vw 1vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.artifacts-container div.single-artifact {
+    position: relative;
+    width: 10.6vw;
+    height: 10.6vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    margin: 0 1vw 2vw;
+    background-color: #202020;
+}
+
+div.single-artifact:hover {
+    background-color: #101010;
+    box-shadow: 0 0 0.125vw 0.125vw white;
+}
+
+.single-artifact div.single-artifact-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8vw;
+    height: 8vw;
+}
+
+.single-artifact-img img {
+    width: 100%;
+}
+
+.single-artifact:hover img {
+    animation: hovered-item 0.5s linear infinite;
+}
+
+.single-artifact p {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translate(-50%, -50%);
+    width: 12vw;
+    padding: 1vw;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    background-color: #202020;
+    color: white;
+}
+
+.single-artifact:hover p {
+    display: block;
+}
+
+.single-artifact p:hover {
+    display: none;
+}
+
+.single-artifact p span.artifact-name {
+    display: block;
+    width: 100%;
+    font-size: 1.2vw;
+    text-align: center;
+    margin-bottom: 0.5vw;
+    color: #ffb700;
+}
+
+.single-artifact p span.artifact-atk {
+    color: yellow;
+}
+
+.single-artifact p span.artifact-crit {
+    color: red;
+}
+
+
+
+
+
+
+
+.achievements h1 {
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    color: white;
+}
+
+.achievements div.achievements-container {
+    padding: 2vw 2vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievements-container div.achievements-lvl,
+.achievements-container div.achievements-money,
+.achievements-container div.achievements-weapons,
+.achievements-container div.achievements-artifact,
+.achievements-container div.achievements-moob,
+.achievements-container div.achievements-dungeon,
+.achievements-container div.achievements-boss,
+.achievements-container div.achievements-losses,
+.achievements-container div.achievements-criticals,
+.achievements-container div.achievements-upgrades,
+.achievements-container div.achievements-skins,
+.achievements-container div.achievements-master {
+    border: 2px solid blueviolet;
+    padding: 1vw 1vw 0;
+    border-radius: 15px;
+    margin-bottom: 2vw;
+    background-color: #202020;
+}
+
+.achievements-container div.achievements-lvl h2,
+.achievements-container div.achievements-money h2,
+.achievements-container div.achievements-weapons h2,
+.achievements-container div.achievements-artifact h2,
+.achievements-container div.achievements-moob h2,
+.achievements-container div.achievements-dungeon h2,
+.achievements-container div.achievements-boss h2,
+.achievements-container div.achievements-losses h2,
+.achievements-container div.achievements-criticals h2,
+.achievements-container div.achievements-upgrades h2,
+.achievements-container div.achievements-skins h2,
+.achievements-container div.achievements-master h2 {
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    margin-bottom: 1vw;
+}
+
+div.achievements-container div.single-achievement-1,
+div.achievements-container div.single-achievement-2,
+div.achievements-container div.single-achievement-3,
+div.achievements-container div.single-achievement-4 {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid blueviolet;
+    padding: 1vw;
+    border-radius: 15px;
+    background-color: black;
+    margin-bottom: 1vw;
+}
+
+.single-achievement-1 h2,
+.single-achievement-2 h2,
+.single-achievement-3 h2,
+.single-achievement-4 h2 {
+    display: block;
+    flex-basis: 6vw;
+    height: 6vw;
+    margin-right: 1vw;
+}
+
+.single-achievement-1 p,
+.single-achievement-2 p,
+.single-achievement-3 p,
+.single-achievement-4 p {
+    width: 50vw;
+    padding: 0.5vw 0 0;
+    font-size: 1.3vw;
+    color: white;
+    margin-left: 8vw;
+}
+
+.single-achievement-1 div.get-your-reward,
+.single-achievement-2 div.get-your-reward,
+.single-achievement-3 div.get-your-reward,
+.single-achievement-4 div.get-your-reward {
+    position: relative;
+    width: 15vw;
+    height: 3vw;
+    padding: 0 1vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    margin: 1.5vw;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.single-achievement-1 div.get-your-reward:hover,
+.single-achievement-2 div.get-your-reward:hover,
+.single-achievement-3 div.get-your-reward:hover,
+.single-achievement-4 div.get-your-reward:hover {
+    transform: scale(1.1);
+}
+
+.get-your-reward p {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 3vw;
+    /*    animation: take-reward 0.5s linear infinite;*/
+}
+
+.get-your-reward div.achievements-curtain-1,
+.get-your-reward div.achievements-curtain-2,
+.get-your-reward div.achievements-curtain-3,
+.get-your-reward div.achievements-curtain-4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+
+
+
+
+
+
+
+.upgrade h1 {
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    color: white;
+}
+
+.upgrade div.upgrade-flex {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 7vw);
+}
+
+.upgrade-flex div.upgrade-action {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    padding: 2vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    color: white;
+}
+
+.upgrade-action h2 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.upgrade-action div.upgrade-choosed-item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #202020;
+}
+
+.upgrade-choosed-item img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.upgrade-action div.upgrade-accept {
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 5vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+    text-align: center;
+    line-height: 5vw;
+    font-size: 2vw;
+    transition: 0.2s;
+}
+
+.upgrade-action div.upgrade-accept:hover {
+    box-shadow: -0.1vw 0.1vw 0 #ffb700, -0.2vw 0.2vw 0 #ffb700, -0.3vw 0.3vw 0 #ffb700, -0.4vw 0.4vw 0 #ffb700;
+    left: calc(50% + 0.4vw);
+    top: calc(83% - 0.4vw);
+}
+
+div.accept-curtain {
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    transform: translate(-50%, -50%);
+    width: calc(15vw + 2px);
+    height: calc(5vw + 2px);
+    border-radius: 15px;
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+.upgrade-flex div.upgrade-container {
+    position: relative;
+    width: calc(100% - 30% - 1.5vw);
+    height: 100%;
+    padding: 2vw 1vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+
+
+
+.upgrade-container div.upgrade-item {
+    position: relative;
+    flex-basis: 8vw;
+    height: 8vw;
+    padding: 1vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    margin: 0 1vw 2vw;
+    background-color: #202020;
+}
+
+.upgrade-container div.upgrade-item:hover {
+    background-color: #101010;
+    box-shadow: 0 0 0.125vw 0.125vw white;
+}
+
+.upgrade-container div.upgrade-item:hover img {
+    animation: hovered-item 0.6s linear infinite;
+}
+
+.upgrade-item img {
+    width: 100%;
+}
+
+.upgrade-item span.upgrade-desc {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+    width: 11vw;
+    padding: 1vw;
+    background-color: #101010;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.1vw;
+}
+
+.upgrade-item:hover span.upgrade-desc {
+    display: block;
+}
+
+.upgrade-item span.upgrade-desc:hover {
+    display: none;
+}
+
+span.upgrade-desc span.atk {
+    color: yellow;
+}
+
+span.upgrade-desc span.crit {
+    color: red;
+}
+
+
+
+.home article.skins.active,
+.home article.statistics.active,
+.home article.equipment.active,
+.home article.achievements.active,
+.home article.upgrade.active,
+.home article.artifacts.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  SHOP  */
+
+
+section.shop {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/shop.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.shop img.shop-character {
+    position: absolute;
+    left: 15%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+}
+
+.shop article.items-to-buy {
+    position: absolute;
+    right: 0.5vw;
+    top: 4.5vw;
+    width: 66%;
+    height: calc(100% - 5vw);
+    padding: 3vw;
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 20px;
+}
+
+.items-to-buy div.hello {
+    height: 5vw;
+    padding: 1vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    margin-bottom: 2vw;
+    color: white;
+    font-size: 1.3vw;
+}
+
+.hello p {
+    letter-spacing: 1px;
+}
+
+.items-to-buy div.shop-items {
+    height: calc(100% - 7vw);
+    padding: 1vw 1vw 0;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    overflow-y: scroll;
+}
+
+div.shop-items::-webkit-scrollbar {
+    width: 10px;
+}
+
+div.shop-items::-webkit-scrollbar-track {
+    background: rgba(00, 00, 00, 0);
+}
+
+div.shop-items::-webkit-scrollbar-thumb {
+    background: #00eaff;
+    /*    border: 1px solid black;*/
+    border-radius: 20px;
+}
+
+.shop-items div.shop-item {
+    position: relative;
+    width: 100%;
+    padding: 1vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #303030;
+    margin-bottom: 1vw;
+    display: flex;
+}
+
+.shop-item div.shop-item-img {
+    width: 7.7vw;
+    height: 7.7vw;
+    padding: 1vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #202020;
+    transition: 0.3s;
+}
+
+.shop-item div.shop-item-img:hover {
+    background-color: #101010;
+}
+
+.shop-item div.shop-item-img:hover img {
+    animation: hovered-item 0.6s linear infinite;
+}
+
+.shop-item-img img {
+    width: 100%;
+}
+
+.shop-item p {
+    width: calc(100% - 10vw);
+    padding-left: 3vw;
+    line-height: 2.8vw;
+    font-size: 1.5vw;
+    color: white;
+}
+
+.sword-name {
+    color: #ffb700;
+    font-size: 1.8vw;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 black, -0.3vw 0.3vw 0 black;
+}
+
+.shop-item p span.atk {
+    color: yellow;
+}
+
+.shop-item p span.crit {
+    color: red;
+}
+
+.shop-item button {
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12vw;
+    height: 5vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: url(img/cursor.png), auto;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5vw;
+    transition: 0.2s;
+}
+
+.shop-item button:hover {
+    box-shadow: -0.1vw 0.1vw 0 #ffb700, -0.2vw 0.2vw 0 #ffb700, -0.3vw 0.3vw 0 #ffb700, -0.4vw 0.4vw 0 #ffb700;
+    right: 1.6vw;
+    top: calc(50% - 0.4vw);
+}
+
+
+
+
+
+
+
+
+/*  BATTLE FIELD  */
+
+
+
+section.battle-field {
+    /*    display: block;*/
+    width: 100%;
+    height: 100%;
+    background-image: url(img/battleField.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.battle-field div.battles {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    width: 96%;
+    height: 87%;
+    padding: 3vw 1.5vw;
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 20px;
+    display: flex;
+}
+
+.battles div.option {
+    position: relative;
+    flex-basis: 40%;
+    height: 100%;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    margin: 0 1.5vw;
+    background-size: 260%;
+    background-position: center;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.option.moob {
+    background-image: url(img/moobRoom.jpg);
+    color: darkmagenta;
+}
+
+.option.dungeon {
+    background-image: url(img/dungeonRoom.png);
+    color: black;
+}
+
+.option.boss {
+    background-image: url(img/bossRoom.jpg);
+    color: red;
+    font-size: 3vw;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 #ffb700;
+}
+
+.option.boss p {
+    font-size: 3vw;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 #ffb700;
+}
+
+.option.boss:hover,
+.option.dungeon:hover,
+.option.moob:hover {
+    background-size: 240%;
+    box-shadow: 0 0 0.25vw 0.5vw white;
+}
+
+.option div.battle-curtain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.7);
+}
+
+.battle-curtain h2 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    text-shadow: -0.1vw 0.1vw black, -0.2vw 0.2vw #ffb700, -0.3vw 0.3vw #ffb700;
+}
+
+.battle-curtain p {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4vw);
+    font-size: 2vw;
+    text-align: center;
+    /*    color: white;*/
+}
+
+
+
+
+
+/*  BACK */
+
+
+.shop div.shop-back,
+.home div.home-back,
+.battle-field div.battle-field-back {
+    position: absolute;
+    /*
+    left: 2.5vw;
+    bottom: 2.5vw;
+*/
+    left: 3vw;
+    bottom: 3vw;
+    transform: translate(-50%, 50%);
+    width: 3vw;
+    height: 3vw;
+}
+
+div.shop-back img,
+div.home-back img,
+div.battle-field-back img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+div.shop-back img:hover,
+div.home-back img:hover,
+div.battle-field-back img:hover {
+    animation: pulse2 0.5s linear infinite;
+}
+
+
+
+
+/*  WALKA  */
+
+
+
+.battle-field article {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.battle-field article.moob.active,
+.battle-field article.dungeon.active,
+.battle-field article.boss.active {
+    display: block;
+}
+
+.battle-field article.moob {
+    background-image: url(img/moobRoom.jpg);
+}
+
+.battle-field article.dungeon {
+    background-image: url(img/dungeonRoom.png);
+}
+
+.battle-field article.boss {
+    background-image: url(img/bossRoom.jpg);
+}
+
+article div.fight-character {
+    position: absolute;
+    left: 3vw;
+    top: 54%;
+    transform: translateY(-50%);
+    width: 32vw;
+    height: calc(100vh - 6vw);
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
+article div.fight-character img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+}
+
+
+
+
+
+
+article div.fight-course {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    width: 24vw;
+    height: calc(100vh - 6vw);
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
+.fight-course div.fight-time {
+    position: absolute;
+    left: 50%;
+    top: 2vw;
+    transform: translateX(-50%);
+    width: 20vw;
+    height: 9.5vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+}
+
+div.fight-time p.xd {
+    position: absolute;
+    left: 50%;
+    top: 1vw;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2vw;
+}
+
+.fight-time div.fight-time-value {
+    position: absolute;
+    left: 1vw;
+    top: 6vw;
+    transform: translateY(-50%);
+    width: calc(100% - 2vw);
+    height: 3vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #303030;
+    overflow: hidden;
+}
+
+.fight-course div.fight-hp {
+    position: absolute;
+    left: 50%;
+    top: 13.3vw;
+    transform: translateX(-50%);
+    width: 20vw;
+    height: 9.5vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+}
+
+.fight-hp p.xd {
+    position: absolute;
+    left: 50%;
+    top: 1vw;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2vw;
+}
+
+.fight-hp div.fight-hp-value {
+    position: absolute;
+    left: 1vw;
+    top: 6vw;
+    transform: translateY(-50%);
+    width: calc(100% - 2vw);
+    height: 3vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #303030;
+    overflow: hidden;
+}
+
+.fight-hp-value div.fight-value-curtain,
+.fight-time-value div.fight-value-curtain {
+    width: 50%;
+    height: 100%;
+    background-color: #ffb700;
+}
+
+.fight-hp-value p,
+.fight-time-value p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 black;
+    font-size: 1.5vw;
+}
+
+.fight-course div.fight-start {
+    position: absolute;
+    left: 50%;
+    bottom: 2vw;
+    transform: translateX(-50%);
+    width: 20vw;
+    height: 15vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.fight-course div.fight-start:hover {
+    transform: scale(1.1) translateX(-45%);
+    box-shadow: 0 0 0.125vw 0.25vw white;
+}
+
+.fight-start div.crossed-swords {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 9vw;
+    height: 9vw;
+}
+
+.crossed-swords img {
+    width: 100%;
+}
+
+.fight-start p {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 16vw;
+    height: 3vw;
+    text-align: center;
+    line-height: 3vw;
+    font-size: 3vw;
+    color: red;
+}
+
+
+
+
+
+article div.fight-monster-character {
+    position: absolute;
+    right: 3vw;
+    top: 54%;
+    transform: translateY(-50%);
+    width: 32vw;
+    height: calc(100vh - 6vw);
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 2px solid red;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.fight-monster-character img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    cursor: url(img/cursorfight.png), auto;
+}
+
+.fight-monster-character div.monster-curtain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+div.fight-result-curtain {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+div.fight-result-win,
+div.fight-result-loss {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 35vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #202020;
+}
+
+.fight-result-win p.win,
+div.fight-result-loss p.loss {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+}
+
+.fight-result-win p.exp-gain {
+    position: absolute;
+    left: 2vw;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    color: white;
+}
+
+.exp-gain span {
+    color: limegreen;
+}
+
+.fight-result-win p.money-gain {
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    color: white;
+}
+
+.money-gain span {
+    color: limegreen;
+}
+
+.fight-result-win div.attack-again,
+div.fight-result-loss div.attack-again {
+    position: absolute;
+    right: 27%;
+    top: 80%;
+    transform: translate(50%, -50%);
+    width: 15vw;
+    height: 5vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    font-size: 2vw;
+    color: white;
+    background-color: black;
+    text-align: center;
+    line-height: 5vw;
+    transition: 0.2s;
+}
+
+.fight-result-win div.attack-again:hover,
+div.fight-result-loss div.attack-again:hover {
+    transform: scale(1.1) translate(45%, -45%);
+}
+
+.fight-result-win div.attack-close,
+div.fight-result-loss div.attack-close {
+    position: absolute;
+    left: 27%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 5vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    font-size: 2vw;
+    color: white;
+    background-color: black;
+    text-align: center;
+    line-height: 5vw;
+    transition: 0.2s;
+}
+
+.fight-result-win div.attack-close:hover,
+div.fight-result-loss div.attack-close:hover {
+    transform: scale(1.1) translate(-45%, -45%);
+}
+
+.fight-result-win div.attack-close.attack-close-boss {
+    left: 50%;
+}
+
+div.artifact-gain {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 15vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.artifact-gain h2 {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.artifact-gain p {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.artifact-gain div.artifact-won-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    height: 10vw;
+}
+
+.artifact-won-container img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.artifact-gain div.artifact-won-close {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    transform: translate(50%, -50%);
+    width: 1.4vw;
+    height: 1.4vw;
+}
+
+.artifact-won-close img {
+    width: 100%;
+    /*
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    transform: translate(50%, -50%);
+    width: 70%;
+    height: 70%;
+*/
+}
+
+.artifact-won-close img:hover {
+    animation: pulse3 0.5s linear infinite;
+}
+
+
+
+
+
+
+
+section.outside.active,
+section.home.active,
+section.shop.active,
+section.battle-field.active,
+section.start.active,
+section.curtain.active {
+    display: block;
+}
+
+
+
+
+
+/*  LVL  */
+
+
+
+div.lvl-curtain {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+div.lvl-information {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 15vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.lvl-information div.lvl-close {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    transform: translate(50%, -50%);
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.lvl-close img {
+    width: 100%;
+}
+
+.lvl-close img:hover {
+    animation: pulse3 0.5s linear infinite;
+}
+
+.lvl-information p {
+    font-size: 3vw;
+    text-align: center;
+    line-height: 15vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+}
+
+
+span.color-red {
+    color: red;
+}
+
+
+div.not-enought-money {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 15vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+}
+
+div.not-enought-money div.not-enought-money-close {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    transform: translate(50%, -50%);
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.not-enought-money-close img {
+    width: 100%;
+}
+
+div.not-enought-money p {
+    font-size: 2vw;
+    text-align: center;
+    line-height: 15vw;
+    color: white;
+}
+
+
+
+
+div.ending {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 90%;
+    padding: 2vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    z-index: 9;
+}
+
+
+.ending h1 {
+    text-align: center;
+    font-size: 5vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+    margin-bottom: 4vw;
+}
+
+.ending p.ending-text {
+    color: white;
+    font-size: 1.5vw;
+    margin-bottom: 4vw;
+}
+
+.ending div.ending-stats {
+    padding: 1vw 1vw 0.5vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 4vw;
+}
+
+.ending-stats h2 {
+    text-align: center;
+    font-size: 3vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+    margin: 1vw 0 2vw;
+}
+
+.ending-stats p {
+    position: relative;
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+}
+
+.ending-stats p span {
+    position: absolute;
+    left: 20vw;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #ffb700;
+}
+
+.ending-stats p span.hours,
+.ending-stats p span.minutes,
+.ending-stats p span.seconds {
+    position: relative;
+    left: 0;
+}
+
+
+
+
+
+
+.ending div.ending-thanks {
+    position: relative;
+    padding: 1vw;
+    font-size: 1vw;
+    color: white;
+}
+
+.ending-thanks h1 {
+    margin-bottom: 10vw;
+}
+
+.ending-thanks div {
+    margin-bottom: 10vw;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ending-thanks div h2 {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+}
+
+.ending-thanks div p {
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+}
+
+.ending div.ending-logo {
+    position: relative;
+    height: 20vw;
+    margin-bottom: 4vw;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ending-logo img {
+    position: absolute;
+    left: 50%;
+    top: 2vw;
+    transform: translate(-50%, 0);
+    width: 8vw;
+    height: 8vw;
+}
+
+.ending-logo p {
+    position: absolute;
+    left: 50%;
+    top: 12vw;
+    transform: translate(-50%, 0);
+    font-size: 2vw;
+    color: white;
+}
+
+.ending-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ending div.ending-end {
+    position: relative;
+    height: 20vw;
+}
+
+.ending-end p,
+.sendResults2 {
+    position: absolute;
+    left: 50%;
+    top: 10vw;
+    transform: translate(-50%, 0);
+    width: 14vw;
+    padding: 1vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    transition: 0.2s;
+}
+
+.ending-end p.none {
+    display: none;
+}
+
+p.hover:hover {
+    box-shadow: -0.1vw 0.1vw 0 #ffb700, -0.2vw 0.2vw 0 #ffb700, -0.3vw 0.3vw 0 #ffb700, -0.4vw 0.4vw 0 #ffb700;
+    left: calc(50% + 0.4vw);
+    top: 9.6vw;
+}
+
+.sendingResults {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 35%;
+    padding: 2vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    z-index: 10;
+}
+
+.sendingResultsClose {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    transform: translate(50%, -50%);
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.sendingResultsClose img {
+    width: 100%;
+}
+
+.usernameInp {
+    position: absolute;
+    left: 50%;
+    top: 5vw;
+    transform: translate(-50%, -50%);
+    padding: 1vw;
+    background-color: black;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    outline: none;
+    font-size: 2vw;
+    color: white;
+    font-family: 'Bangers', cursive;
+}
+
+
+
+
+/*  INSTRUKCJA  */
+
+
+
+
+
+
+div.instruction-all,
+div.instruction-home,
+div.instruction-shop,
+div.instruction-battle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    padding: 2vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+}
+
+div.instruction-all.unactive {
+    display: none;
+}
+
+.instruction-all h1,
+.instruction-shop h1,
+.instruction-home h1,
+.instruction-battle h1 {
+    text-align: center;
+    font-size: 4vw;
+    color: white;
+    letter-spacing: 2px;
+    height: 7vw;
+    line-height: 7vw;
+    margin-bottom: 2vw;
+    color: #ffb700;
+    text-shadow: -0.1vw 0.1vw 0 black, -0.2vw 0.2vw 0 red;
+}
+
+.instruction-all div.instruction-image,
+.instruction-shop div.instruction-image,
+.instruction-home div.instruction-image,
+.instruction-battle div.instruction-image {
+    position: absolute;
+    left: 5.5vw;
+    top: 5.5vw;
+    transform: translate(-50%, -50%);
+    width: 7vw;
+    height: 7vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+}
+
+.instruction-image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.instruction-all div.instruction-close,
+.instruction-shop div.instruction-close,
+.instruction-home div.instruction-close,
+.instruction-battle div.instruction-close {
+    position: absolute;
+    right: 1.8vw;
+    top: 1.8vw;
+    transform: translate(50%, -50%);
+    width: 2vw;
+    height: 2vw;
+}
+
+.instruction-home div.instruction-next,
+.instruction-battle div.instruction-next {
+    position: absolute;
+    right: 23vw;
+    bottom: 11.3%;
+    transform: translate(50%, 50%);
+    width: 2vw;
+    height: 2vw;
+}
+
+.instruction-battle div.instruction-next {
+    right: 29vw;
+}
+
+.instruction-close img {
+    width: 100%;
+}
+
+.instruction-next img {
+    width: 120%;
+    transform: rotate(180deg);
+    transform: rotateY(180deg);
+}
+
+.instruction-close img:hover {
+    animation: pulse3 0.5s linear infinite;
+}
+
+.instruction-next img:hover {
+    animation: pulse6 0.5s linear infinite;
+}
+
+
+.instruction-all p,
+.instruction-shop p,
+.instruction-battle div.instruction-battleoverall,
+.instruction-battle div.instruction-moob,
+.instruction-battle div.instruction-dungeon,
+.instruction-battle div.instruction-boss,
+.instruction-home div.instruction-homeoverall,
+.instruction-home div.instruction-eq,
+.instruction-home div.instruction-artifacts,
+.instruction-home div.instruction-upgrades,
+.instruction-home div.instruction-skins,
+.instruction-home div.instruction-stats,
+.instruction-home div.instruction-achievements {
+    padding: 1vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    color: white;
+    height: 20vw;
+    font-size: 1.5vw;
+}
+
+.instruction-battle div.instruction-battleoverall,
+.instruction-battle div.instruction-moob,
+.instruction-battle div.instruction-dungeon,
+.instruction-battle div.instruction-boss,
+.instruction-home div.instruction-homeoverall,
+.instruction-home div.instruction-eq,
+.instruction-home div.instruction-artifacts,
+.instruction-home div.instruction-upgrades,
+.instruction-home div.instruction-skins,
+.instruction-home div.instruction-stats,
+.instruction-home div.instruction-achievements {
+    position: absolute;
+    left: 50%;
+    top: 21vw;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4vw);
+    height: 20vw;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.instruction-battle div.instruction-battleoverall.active,
+.instruction-battle div.instruction-moob.active,
+.instruction-battle div.instruction-dungeon.active,
+.instruction-battle div.instruction-boss.active,
+.instruction-home div.instruction-homeoverall.active,
+.instruction-home div.instruction-eq.active,
+.instruction-home div.instruction-artifacts.active,
+.instruction-home div.instruction-upgrades.active,
+.instruction-home div.instruction-skins.active,
+.instruction-home div.instruction-stats.active,
+.instruction-home div.instruction-achievements.active {
+    opacity: 1;
+}
+
+.instruction-battle div.instruction-battleoverall h2,
+.instruction-battle div.instruction-moob h2,
+.instruction-battle div.instruction-dungeon h2,
+.instruction-battle div.instruction-boss h2,
+.instruction-home div.instruction-homeoverall h2,
+.instruction-home div.instruction-eq h2,
+.instruction-home div.instruction-artifacts h2,
+.instruction-home div.instruction-upgrades h2,
+.instruction-home div.instruction-skins h2,
+.instruction-home div.instruction-stats h2,
+.instruction-home div.instruction-achievements h2 {
+    margin-bottom: 1vw;
+    color: #ffb700;
+}
+
+
+
+.instruction-battle div.dot1,
+.instruction-battle div.dot2,
+.instruction-battle div.dot3,
+.instruction-battle div.dot4,
+.instruction-home div.dot1,
+.instruction-home div.dot2,
+.instruction-home div.dot3,
+.instruction-home div.dot4,
+.instruction-home div.dot5,
+.instruction-home div.dot6,
+.instruction-home div.dot7 {
+    position: absolute;
+    bottom: 11%;
+    transform: translate(-50%, 50%);
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 3px solid blueviolet;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.instruction-battle div.dot1:hover,
+.instruction-battle div.dot2:hover,
+.instruction-battle div.dot3:hover,
+.instruction-battle div.dot4:hover,
+.instruction-home div.dot1:hover,
+.instruction-home div.dot2:hover,
+.instruction-home div.dot3:hover,
+.instruction-home div.dot4:hover,
+.instruction-home div.dot5:hover,
+.instruction-home div.dot6:hover,
+.instruction-home div.dot7:hover {
+    border: 3px solid #ffb700;
+    transform: scale(1.3) translate(-41%, 41%);
+}
+
+.instruction-battle div.dot1 {
+    left: 42.5%;
+}
+
+.instruction-battle div.dot2 {
+    left: 47.5%;
+}
+
+.instruction-battle div.dot3 {
+    left: 52.5%;
+}
+
+.instruction-battle div.dot4 {
+    left: 57.5%;
+}
+
+.instruction-home div.dot1 {
+    left: 35%;
+}
+
+.instruction-home div.dot2 {
+    left: 40%;
+}
+
+.instruction-home div.dot3 {
+    left: 45%;
+}
+
+.instruction-home div.dot4 {
+    left: 50%;
+}
+
+.instruction-home div.dot5 {
+    left: 55%;
+}
+
+.instruction-home div.dot6 {
+    left: 60%;
+}
+
+.instruction-home div.dot7 {
+    left: 65%;
+}
+
+.instruction-battle div.dot1.active,
+.instruction-battle div.dot2.active,
+.instruction-battle div.dot3.active,
+.instruction-battle div.dot4.active,
+.instruction-home div.dot1.active,
+.instruction-home div.dot2.active,
+.instruction-home div.dot3.active,
+.instruction-home div.dot4.active,
+.instruction-home div.dot5.active,
+.instruction-home div.dot6.active,
+.instruction-home div.dot7.active {
+    border: 3px solid #ffb700;
+    transform: scale(1.3) translate(-41%, 41%);
+    box-shadow: 0 0 1vw 0.125vw #ffb700;
+}
+
+
+
+div.inst-shop-curtain,
+div.inst-home-curtain,
+div.inst-battle-curtain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+
+
+
+
+
+
+
+
+div.start-item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    padding: 2vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-item div.start-item-char {
+    position: relative;
+    width: calc(30% - 1vw);
+    height: 100%;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #202020;
+}
+
+.start-item-char img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+}
+
+.start-item div.start-item-content {
+    position: relative;
+    width: calc(70% - 1vw);
+    height: 100%;
+    padding: 2vw;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    background-color: #202020;
+}
+
+.start-item-content p {
+    height: 15vw;
+    font-size: 1.2vw;
+    color: white;
+}
+
+.start-item-content div.start-item-sword {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 9vw;
+    height: 9vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: #181818;
+    transition: 0.3s;
+}
+
+.start-item-content div.start-item-sword:hover {
+    background-color: black;
+}
+
+.start-item-sword img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.start-item-sword span.start-item-desc {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+    width: 11vw;
+    padding: 0.5vw;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    background-color: #303030;
+    color: white;
+    font-size: 1.1vw;
+}
+
+.start-item-sword:hover span.start-item-desc {
+    display: block;
+}
+
+.start-item-sword span.start-item-desc:hover {
+    display: none;
+}
+
+
+.start-item-content div.start-item-thanks {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 6vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    font-size: 2vw;
+    line-height: 6vw;
+    text-align: center;
+    transition: 0.2s;
+    color: #ffb700;
+    background-color: black;
+}
+
+.start-item-content div.start-item-thanks:hover {
+    box-shadow: -0.1vw 0.1vw 0 #ffb700, -0.2vw 0.2vw 0 #ffb700, -0.3vw 0.3vw 0 #ffb700, -0.4vw 0.4vw 0 #ffb700;
+    left: calc(50% + 0.4vw);
+    top: calc(80% - 0.4vw);
+}
+
+
+
+
+
+
+
+.no-attack {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 20vw;
+    padding: 2vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.no-attack p {
+    color: white;
+    font-size: 1.3vw;
+}
+
+.no-attack div.noattack-back,
+.no-attack div.noattack-go {
+    position: absolute;
+    top: 77%;
+    transform: translate(-50%, -50%);
+    width: 14vw;
+    height: 4vw;
+    border: 2px solid #ffb700;
+    border-radius: 15px;
+    line-height: 4vw;
+    text-align: center;
+    transition: 0.2s;
+    color: white;
+    font-size: 1.3vw;
+}
+
+.no-attack div.noattack-back:hover,
+.no-attack div.noattack-go:hover {
+    box-shadow: -0.1vw 0.1vw 0 #ffb700, -0.2vw 0.2vw 0 #ffb700, -0.3vw 0.3vw 0 #ffb700, -0.4vw 0.4vw 0 #ffb700;
+}
+
+.no-attack div.noattack-back:hover {
+    left: calc(25% + 0.4vw);
+    top: calc(77% - 0.4vw);
+}
+
+.no-attack div.noattack-go:hover {
+    left: calc(75% + 0.4vw);
+    top: calc(77% - 0.4vw);
+}
+
+.no-attack div.noattack-back {
+    left: 25%;
+}
+
+.no-attack div.noattack-go {
+    left: 75%;
+}
+
+
+
+
+
+
+
+
+/*  ANIMACJE  */
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) translate(-50%, -50%)
+    }
+
+    50% {
+        transform: scale(1.05) translate(-48%, -48%)
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, -50%)
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(1) translate(-50%, -50%)
+    }
+
+    50% {
+        transform: scale(1.1) translate(-46%, -46%)
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, -50%)
+    }
+}
+
+@keyframes pulse3 {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes pulse4 {
+    0% {
+        transform: scale(1) translate(0, -45%)
+    }
+
+    50% {
+        transform: scale(1.1) translate(0, -45%)
+    }
+
+    100% {
+        transform: scale(1) translate(0, -45%)
+    }
+}
+
+@keyframes pulse5 {
+    0% {
+        transform: scale(1) translate(-1%, -49%)
+    }
+
+    50% {
+        transform: scale(1.1) translate(-1%, -49%)
+    }
+
+    100% {
+        transform: scale(1) translate(-1%, -49%)
+    }
+}
+
+@keyframes pulse6 {
+    0% {
+        transform: scale(1) rotateY(180deg)
+    }
+
+    50% {
+        transform: scale(1.1) rotateY(180deg)
+    }
+
+    100% {
+        transform: scale(1) rotateY(180deg)
+    }
+}
+
+@keyframes hovered-item {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.08)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes take-reward {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}

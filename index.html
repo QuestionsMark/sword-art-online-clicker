@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SAO Clicker | Question Mark</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+    <audio id="music" src="" autoplay loop></audio>
+    <audio src="" id="music-efects" autoplay></audio>
+    <audio src="" id="music-efects2" autoplay></audio>
+    <section class="player-statistics">
+        <p class="character">Kirito</p>
+        <p class="lvl">lvl: <span></span></p>
+        <p class="exp">exp: <span></span></p>
+        <p class="money"><img src="img/coin.png" alt=""><span>120000</span></p>
+        <p class="atack">atk: <span></span></p>
+        <p class="crit">crit: <span></span><span style="color:red">%</span></p>
+    </section>
+    <div class="music-volume">
+        <img class="music-value" src="img/sound.png" alt="">
+        <div class="music-volume-points">
+            <div class="music-volume-point" id="0.01" data-index="1"></div>
+            <div class="music-volume-point" id="0.02" data-index="2"></div>
+            <div class="music-volume-point" id="0.03" data-index="3"></div>
+            <div class="music-volume-point" id="0.04" data-index="4"></div>
+            <div class="music-volume-point" id="0.05" data-index="5"></div>
+            <div class="music-volume-point" id="0.06" data-index="6"></div>
+            <div class="music-volume-point" id="0.07" data-index="7"></div>
+            <div class="music-volume-point" id="0.08" data-index="8"></div>
+            <div class="music-volume-point" id="0.09" data-index="9"></div>
+            <div class="music-volume-point" id="0.10" data-index="10"></div>
+            <div class="music-volume-point" id="0.11" data-index="11"></div>
+            <div class="music-volume-point" id="0.12" data-index="12"></div>
+            <div class="music-volume-point" id="0.13" data-index="13"></div>
+            <div class="music-volume-point" id="0.14" data-index="14"></div>
+            <div class="music-volume-point" id="0.15" data-index="15"></div>
+            <div class="music-volume-point" id="0.16" data-index="16"></div>
+            <div class="music-volume-point" id="0.17" data-index="17"></div>
+            <div class="music-volume-point" id="0.18" data-index="18"></div>
+            <div class="music-volume-point" id="0.19" data-index="19"></div>
+            <div class="music-volume-point" id="0.20" data-index="20"></div>
+            <div class="music-volume-point" id="0.21" data-index="21"></div>
+            <div class="music-volume-point" id="0.22" data-index="22"></div>
+            <div class="music-volume-point" id="0.23" data-index="23"></div>
+            <div class="music-volume-point" id="0.24" data-index="24"></div>
+            <div class="music-volume-point" id="0.25" data-index="25"></div>
+            <div class="music-volume-point" id="0.26" data-index="26"></div>
+            <div class="music-volume-point" id="0.27" data-index="27"></div>
+            <div class="music-volume-point" id="0.28" data-index="28"></div>
+            <div class="music-volume-point" id="0.29" data-index="29"></div>
+            <div class="music-volume-point" id="0.30" data-index="30"></div>
+            <div class="music-volume-point" id="0.31" data-index="31"></div>
+            <div class="music-volume-point" id="0.32" data-index="32"></div>
+            <div class="music-volume-point" id="0.33" data-index="33"></div>
+            <div class="music-volume-point" id="0.34" data-index="34"></div>
+            <div class="music-volume-point" id="0.35" data-index="35"></div>
+            <div class="music-volume-point" id="0.36" data-index="36"></div>
+            <div class="music-volume-point" id="0.37" data-index="37"></div>
+            <div class="music-volume-point" id="0.38" data-index="38"></div>
+            <div class="music-volume-point" id="0.39" data-index="39"></div>
+            <div class="music-volume-point" id="0.40" data-index="40"></div>
+            <div class="music-volume-point" id="0.41" data-index="41"></div>
+            <div class="music-volume-point" id="0.42" data-index="42"></div>
+            <div class="music-volume-point" id="0.43" data-index="43"></div>
+            <div class="music-volume-point" id="0.44" data-index="44"></div>
+            <div class="music-volume-point" id="0.45" data-index="45"></div>
+            <div class="music-volume-point" id="0.46" data-index="46"></div>
+            <div class="music-volume-point" id="0.47" data-index="47"></div>
+            <div class="music-volume-point" id="0.48" data-index="48"></div>
+            <div class="music-volume-point" id="0.49" data-index="49"></div>
+            <div class="music-volume-point" id="0.50" data-index="50"></div>
+            <div class="music-volume-point" id="0.51" data-index="51"></div>
+            <div class="music-volume-point" id="0.52" data-index="52"></div>
+            <div class="music-volume-point" id="0.53" data-index="53"></div>
+            <div class="music-volume-point" id="0.54" data-index="54"></div>
+            <div class="music-volume-point" id="0.55" data-index="55"></div>
+            <div class="music-volume-point" id="0.56" data-index="56"></div>
+            <div class="music-volume-point" id="0.57" data-index="57"></div>
+            <div class="music-volume-point" id="0.58" data-index="58"></div>
+            <div class="music-volume-point" id="0.59" data-index="59"></div>
+            <div class="music-volume-point" id="0.60" data-index="60"></div>
+            <div class="music-volume-point" id="0.61" data-index="61"></div>
+            <div class="music-volume-point" id="0.62" data-index="62"></div>
+            <div class="music-volume-point" id="0.63" data-index="63"></div>
+            <div class="music-volume-point" id="0.64" data-index="64"></div>
+            <div class="music-volume-point" id="0.65" data-index="65"></div>
+            <div class="music-volume-point" id="0.66" data-index="66"></div>
+            <div class="music-volume-point" id="0.67" data-index="67"></div>
+            <div class="music-volume-point" id="0.68" data-index="68"></div>
+            <div class="music-volume-point" id="0.69" data-index="69"></div>
+            <div class="music-volume-point" id="0.70" data-index="70"></div>
+            <div class="music-volume-point" id="0.71" data-index="71"></div>
+            <div class="music-volume-point" id="0.72" data-index="72"></div>
+            <div class="music-volume-point" id="0.73" data-index="73"></div>
+            <div class="music-volume-point" id="0.74" data-index="74"></div>
+            <div class="music-volume-point" id="0.75" data-index="75"></div>
+            <div class="music-volume-point" id="0.76" data-index="76"></div>
+            <div class="music-volume-point" id="0.77" data-index="77"></div>
+            <div class="music-volume-point" id="0.78" data-index="78"></div>
+            <div class="music-volume-point" id="0.79" data-index="79"></div>
+            <div class="music-volume-point" id="0.80" data-index="80"></div>
+            <div class="music-volume-point" id="0.81" data-index="81"></div>
+            <div class="music-volume-point" id="0.82" data-index="82"></div>
+            <div class="music-volume-point" id="0.83" data-index="83"></div>
+            <div class="music-volume-point" id="0.84" data-index="84"></div>
+            <div class="music-volume-point" id="0.85" data-index="85"></div>
+            <div class="music-volume-point" id="0.86" data-index="86"></div>
+            <div class="music-volume-point" id="0.87" data-index="87"></div>
+            <div class="music-volume-point" id="0.88" data-index="88"></div>
+            <div class="music-volume-point" id="0.89" data-index="89"></div>
+            <div class="music-volume-point" id="0.90" data-index="90"></div>
+            <div class="music-volume-point" id="0.91" data-index="91"></div>
+            <div class="music-volume-point" id="0.92" data-index="92"></div>
+            <div class="music-volume-point" id="0.93" data-index="93"></div>
+            <div class="music-volume-point" id="0.94" data-index="94"></div>
+            <div class="music-volume-point" id="0.95" data-index="95"></div>
+            <div class="music-volume-point" id="0.96" data-index="96"></div>
+            <div class="music-volume-point" id="0.97" data-index="97"></div>
+            <div class="music-volume-point" id="0.98" data-index="98"></div>
+            <div class="music-volume-point" id="0.99" data-index="99"></div>
+            <div class="music-volume-point" id="1" data-index="100"></div>
+        </div>
+    </div>
+    <section class="outside active">
+        <img src="" alt="">
+        <div class="house"><img src="img/homeicon.png" alt=""></div>
+        <div class="battle"><img src="img/battleicon.png" alt=""></div>
+        <div class="item-shop"><img src="img/shopicon.png" alt=""></div>
+    </section>
+    <section class="curtain active"></section>
+    <section class="start active">
+        <h1>Wybierz swoją postać!</h1>
+        <div class="asuna-img">
+            <img class="asuna" src="img/asuna20.png" alt="">
+        </div>
+        <div class="kirito-img">
+            <img class="kirito" src="img/kirito17.png" alt="">
+        </div>
+    </section>
+    <section class="home">
+        <img class="main-character" src="" alt="">
+        <div class="skins"><img src="img/skinsicon.png" alt=""></div>
+        <div class="statistics"><img src="img/statsicon.png" alt=""></div>
+        <div class="equipment"><img src="img/eqicon.png" alt=""></div>
+        <div class="achievements"><img src="img/achievements.png" alt=""></div>
+        <div class="upgrade"><img src="img/upgrade.png" alt=""></div>
+        <div class="artifacts"><img src="img/artifacts.png" alt=""></div>
+        <div class="home-back"><img src="img/backicon.png" alt=""></div>
+        <div class="home-curtain"></div>
+        <article class="skins">
+            <div class="scroll-bar">
+                <div class="skins-close"><img src="img/close.png" alt=""></div>
+                <div class="available-skins">
+                    <h2>Dostępne Skiny</h2>
+                    <div class="skins-container">
+                        <!--  dostepne skiny  -->
+                    </div>
+                </div>
+                <div class="skins-to-buy">
+                    <h2>Niedostępne Skiny</h2>
+                    <div class="skins-container">
+                        <!-- Skiny do kupienia -->
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="statistics">
+            <div class="scroll-bar">
+                <div class="statistics-close"><img src="img/close.png" alt=""></div>
+                <h2>Statystyki</h2>
+                <div class="stats-statistics">
+                    <p class="lvl-earned">Zdobyty poziom :<span>1</span></p>
+                    <p class="exp-earned">Zdobyte doświadczenie :<span>0</span></p>
+                    <p class="money-earned">Ilość zdobytych złotych monet :<span>0</span></p>
+                    <p class="weapons-bought">Ilość posiadanych mieczy :<span>0</span></p>
+                    <p class="artifacts-earned">Ilość zdobytych artefaktów :<span>0</span></p>
+                    <p class="moobs-defeated">Pokonane Mooby :<span>0</span></p>
+                    <p class="dungeons-finished">Ukończone Dungeony :<span>0</span></p>
+                    <p class="bosses-defeated">Ilość pokonanych Bossów :<span>0</span></p>
+                    <p class="losses">Ilość porażek :<span>0</span></p>
+                    <p class="hits">Ilość zadanych ciosów :<span>0</span></p>
+                    <p class="criticals">Ilość zadanych ciosów krytycznych :<span>0</span></p>
+                    <p class="damage">Ilość zadanych obrażeń :<span>0</span></p>
+                    <p class="upgrades">Ilość ulepszeń wszystkich broni :<span>0</span></p>
+                    <p class="skins-bought">Ilość posiadanych outfitów :<span>1</span></p>
+                    <p class="achievements-got">Ilość zdobytych osiągnięć :<span>0</span></p>
+                </div>
+            </div>
+        </article>
+        <article class="equipment">
+            <div class="equipment-close"><img src="img/close.png" alt=""></div>
+            <div class="eq-container">
+                <div class="eq-character">
+                    <img src="img/asuna.png" alt="">
+                    <h2>Poziom : <span>1</span></h2>
+                </div>
+                <div class="eq-character-items">
+                    <div class="weapon">
+                        <h2>Używana broń</h2>
+                        <div class="weapon-flex">
+                            <div class="choosed-weapon"><img src="" alt=""></div>
+                            <p>Atak : <span class="atk" style="color: yellow">0</span><br>cios krytyczny : <span class="crit" style="color: red">0</span><span style="color: red">%</span></p>
+                        </div>
+                    </div>
+                    <div class="eq-equipment">
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="achievements">
+            <div class="scroll-bar">
+                <div class="achievements-close"><img src="img/close.png" alt=""></div>
+                <h1>Osiągnięcia</h1>
+                <div class="achievements-container">
+                    <div class="achievements-lvl">
+                        <h2>Poziom</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Osiągnij 10 poziom</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Osiągnij 25 poziom</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Osiągnij 50 poziom</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-money">
+                        <h2>Złote monety</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 1000 złotych monet</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 25000 złotych monet</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 500000 złotych monet</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-4">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 5000000 złotych monet</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-weapons">
+                        <h2>Bronie</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 3 miecze</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 8 mieczy</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 15 mieczy</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-artifact">
+                        <h2>Artefakty</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 2 artefakty</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 5 artefaktów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zdobądź 10 artefaktów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-moob">
+                        <h2>Mooby</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 50 moobów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 300 moobów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 1000 moobów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-dungeon">
+                        <h2>Dungeony</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>oczyść 10 Dungeonów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>oczyść 25 Dungeonów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>oczyść 50 Dungeonów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-boss">
+                        <h2>Bossy</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 1 bossa</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 5 bossów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Pokonaj 10 bossów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-losses">
+                        <h2>Przegrane walki</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Przegraj 10 pojedynków</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Przegraj 50 pojedynków</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Przegraj 100 pojedynków</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-criticals">
+                        <h2>Ciosy krytyczne</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zadaj 100 ciosów krytycznych</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zadaj 1000 ciosów krytycznych</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zadaj 5000 ciosów krytycznych</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-4">
+                            <img src="img/achievements.png" alt="">
+                            <p>Zadaj 10000 ciosów krytycznych</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-upgrades">
+                        <h2>Ulepszenia</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>ulepsz swoje bronie 5 razy</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>ulepsz swoje bronie 10 razy</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>ulepsz swoje bronie 50 razy</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-skins">
+                        <h2>Skiny</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądź 5 skinów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądź 10 skinów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądź 20 skinów</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-master">
+                        <h2>Mistrz Gierki</h2>
+                        <div class="single-achievement-1">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądz 10 osiągnięć</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-1"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-2">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądz 25 osiągnięć</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-2"></div>
+                            </div>
+                        </div>
+                        <div class="single-achievement-3">
+                            <img src="img/achievements.png" alt="">
+                            <p>zdobądz 37 osiągnięć</p>
+                            <div class="get-your-reward">
+                                <p>Odbierz nagrodę</p>
+                                <div class="achievements-curtain-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="upgrade">
+            <div class="upgrade-close"><img src="img/close.png" alt=""></div>
+            <h1>Ulepszenie Broni</h1>
+            <div class="upgrade-flex">
+                <div class="upgrade-action">
+                    <h2>Wybierz Broń do ulepszenia</h2>
+                    <div class="upgrade-choosed-item"><img src="" alt=""></div>
+                    <div class="upgrade-accept">Ulepsz za <span></span></div>
+                    <div class="accept-curtain"></div>
+                </div>
+                <div class="upgrade-container">
+                    <!-- artefakty z js -->
+
+                </div>
+            </div>
+        </article>
+        <article class="artifacts">
+            <div class="scroll-bar">
+                <div class="artifacts-close"><img src="img/close.png" alt=""></div>
+                <h1>Artefakty</h1>
+                <div class="artifacts-container">
+                    <!-- artefakty z js -->
+                </div>
+            </div>
+        </article>
+
+
+
+        <div class="inst-home-curtain"></div>
+        <div class="instruction-home">
+            <h1>samouczek - Dom</h1>
+            <div class="instruction-image"><img src="img/akichiko.png" alt=""></div>
+            <div class="instruction-close"><img src="img/close.png" alt=""></div>
+            <div class="instruction-next"><img src="img/backicon.png" alt=""></div>
+            <div class="dots dot1 active" data-id="1"></div>
+            <div class="dots dot2" data-id="2"></div>
+            <div class="dots dot3" data-id="3"></div>
+            <div class="dots dot4" data-id="4"></div>
+            <div class="dots dot5" data-id="5"></div>
+            <div class="dots dot6" data-id="6"></div>
+            <div class="dots dot7" data-id="7"></div>
+            <div class="inst instruction-homeoverall active" data-key="1">
+                <h2>Miejsce odpoczynku</h2>
+                <p>W domu możesz chwilę odsapnąć od zaciętej walki, przeglądnąc swój ekwipunek oraz sprawdzić swój postęp w grze. Możesz również ulepszyć swoje bronie, przejrzeć artefakty i zakupić outfit swojej postaci.</p>
+            </div>
+            <div class="inst instruction-eq" data-key="2">
+                <h2>ekwipunek</h2>
+                <p>W ekwipunku znajdziesz wszystkie swoje bronie, w które możesz się wyposażyć i przejrzeć ich statystyki.</p>
+            </div>
+            <div class="inst instruction-artifacts" data-key="3">
+                <h2>artefakty</h2>
+                <p>Po klikniięciu w kuferek, przejdziesz do pokoju, gdzie znajdziesz wszystkie artefakty, które zdobędziesz podczas pokonywania potworów. Możesz tam przejrzeć statystyki swoich artefaktów.</p>
+            </div>
+            <div class="inst instruction-upgrades" data-key="4">
+                <h2>ulepszanie broni</h2>
+                <p>W pokoju ulepszeń możesz zwiększyć obrażenia swoich broni. ulepszenie dodaje +1 obrażeń do twojej broni. Aby ulepszyć przedmiot naciśnij na miecz, któremu chcesz podnieść statystyki, a nastepnie kliknij przycisk "ulepsz". <span style="color: red">Uwaga!!!</span> Żeby ulepszyć broń, uprzednio Twoja postać musi ją ściągnąć z ekwipunku, więc nie zapomnij jej spowrotem założyć! Koszt ulepszenia rośnie wraz z poziomem postaci.</p>
+            </div>
+            <div class="inst instruction-skins" data-key="5">
+                <h2>skiny</h2>
+                <p>Co ci będę dużo mówił. Skiny. Dużo kosztują, nic nie dają, ale fajnie wyglądają. :)</p>
+            </div>
+            <div class="inst instruction-stats" data-key="6">
+                <h2>statystyki</h2>
+                <p>Klikając w kawałek papirusu otworzy Ci się okno ze statystykami. Możesz tam je przejrzeć.</p>
+            </div>
+            <div class="inst instruction-achievements" data-key="7">
+                <h2>osiągnięcia</h2>
+                <p>Osiągnięcia możesz traktować jak poboczne cele gry. za ich zdobywanie możesz odebrać nagrody w postaci złotych monet. mogą ci się przydać by szybciej ukończyć grę.</p>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="shop">
+        <img class="shop-character" src="img/liza.png" alt="">
+        <article class="items-to-buy">
+            <div class="hello">
+                <p>Witaj <span class="name"></span>! Co Cię sprowadza do mojej kuźni? Czyżbyś <span class="txt1"></span> kupić nową broń? Jeśli tak, to rozejrzyj się po sklepie i daj znać jak coś Ci się spodoba!</p>
+            </div>
+            <div class="shop-items">
+                <!--      script content         -->
+
+            </div>
+        </article>
+        <div class="shop-back"><img src="img/backicon.png" alt=""></div>
+
+        <div class="inst-shop-curtain"></div>
+        <div class="start-item">
+            <div class="start-item-char"><img src="img/liza.png" alt=""></div>
+            <div class="start-item-content">
+                <p>Cześć <span class="text2"></span>! Czy ja dobrze widze, że nie masz jeszcze żadnego miecza? Bez wyposarzenia nie ma szans, że sobie poradzisz na polu walki. Nie mam zbyt wiele, ale może mój stary miecz treningowy Ci się przyda. Zawsze to coś nie? Jak w końcu zdecydujesz się zmienić go na coś lepszego, to przychodź do mnie! na pewno coś wykombinuję.</p>
+                <div class="start-item-sword">
+                <img src="img/miecz11.png" alt="">
+                <span class="start-item-desc"><span class="sword-name2">drewniany miecz treningowy</span>Atak : <span style="color: yellow">1</span><br>Cios krytyczny : <span style="color: red">0%</span></span>
+                </div>
+                <div class="start-item-thanks">Dzięki!</div>
+            </div>
+        </div>
+        <div class="instruction-shop">
+            <h1>samouczek - Sklep</h1>
+            <div class="instruction-image"><img src="img/akichiko.png" alt=""></div>
+            <div class="instruction-close"><img src="img/close.png" alt=""></div>
+            <p>W sklepie możesz wyposażyć się w broń niezbędną do pokonywania potworów. Kiedy nazbierasz wystarczającą ilość złotych monet, odwiedź kuźnię Lisabeth, a napewno znajdziesz coś dla siebie.</p>
+        </div>
+    </section>
+    <section class="battle-field">
+        <div class="battles">
+            <div class="option moob">
+                <div class="battle-curtain">
+                    <h2>moob</h2>
+                    <p>Mooby to świetne expowisko. Jesli chcesz szybko zdobyć doświadczenie, to będzie to dla Ciebie najlepsza opcja.</p>
+                </div>
+            </div>
+            <div class="option dungeon">
+                <div class="battle-curtain">
+                    <h2>dungeon</h2>
+                    <p>Po ukończeniu dungeona dostaniesz dużą nagrodę w postaci złotych monet. Jeśli ci ich brakuje, to wpadaj tu częściej.</p>
+                </div>
+            </div>
+            <div class="option boss">
+                <div class="battle-curtain">
+                    <h2>boss</h2>
+                    <p>Piętro 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="battle-field-back"><img src="img/backicon.png" alt=""></div>
+        <article class="moob">
+            <div class="fight-character"><img src="img/asuna.png" alt=""></div>
+            <div class="fight-course">
+                <div class="fight-time">
+                    <p class="xd">czas</p>
+                    <div class="fight-time-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-hp">
+                    <p class="xd">hp</p>
+                    <div class="fight-hp-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-start">
+                    <div class="crossed-swords">
+                        <img src="img/battleicon.png" alt="">
+                    </div>
+                    <p>Atakuj !</p>
+                </div>
+            </div>
+            <div class="fight-monster-character">
+                <img src="" alt="">
+                <div class="monster-curtain"></div>
+            </div>
+            <div class="fight-close"><img src="img/close.png" alt=""></div>
+            <div class="fight-result-curtain"></div>
+            <div class="fight-result-win">
+                <p class="win">Wygrałeś !</p>
+                <p class="exp-gain">Zdobyłeś <span>10</span> doświadczenia</p>
+                <p class="money-gain">Zdobyłeś <span>10</span> złotych monet</p>
+                <div class="attack-again">Walcz dalej</div>
+                <div class="attack-close">Zakończ Walkę</div>
+            </div>
+            <div class="fight-result-loss">
+                <p class="loss">Przegrałeś !</p>
+                <div class="attack-again">Spróbuj Ponownie</div>
+                <div class="attack-close">Zakończ Walkę</div>
+            </div>
+            <div class="artifact-gain">
+                <h2>Artefakt!</h2>
+                <p class="artifact-gain">Pierścień Władcy Ognia</p>
+                <div class="artifact-won-container">
+                    <img src="" alt="">
+                </div>
+                <div class="artifact-won-close">
+                    <img src="img/close.png" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="dungeon">
+            <div class="fight-character"><img src="img/asuna.png" alt=""></div>
+            <div class="fight-course">
+                <div class="fight-time">
+                    <p class="xd">czas</p>
+                    <div class="fight-time-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-hp">
+                    <p class="xd">hp</p>
+                    <div class="fight-hp-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-start">
+                    <div class="crossed-swords">
+                        <img src="img/battleicon.png" alt="">
+                    </div>
+                    <p>Atakuj !</p>
+                </div>
+            </div>
+            <div class="fight-monster-character">
+                <img src="" alt="">
+                <div class="monster-curtain"></div>
+            </div>
+            <div class="fight-close"><img src="img/close.png" alt=""></div>
+            <div class="fight-result-curtain"></div>
+            <div class="fight-result-win">
+                <p class="win">Wygrałeś !</p>
+                <p class="exp-gain">Zdobyłeś <span>10</span> doświadczenia</p>
+                <p class="money-gain">Zdobyłeś <span>10</span> złotych monet</p>
+                <div class="attack-again">Walcz dalej</div>
+                <div class="attack-close">Zakończ Walkę</div>
+            </div>
+            <div class="fight-result-loss">
+                <p class="loss">Przegrałeś !</p>
+                <div class="attack-again">Spróbuj Ponownie</div>
+                <div class="attack-close">Zakończ Walkę</div>
+            </div>
+            <div class="artifact-gain">
+                <h2>Artefakt!</h2>
+                <p class="artifact-gain">Pierścień Władcy Ognia</p>
+                <div class="artifact-won-container">
+                    <img src="" alt="">
+                </div>
+                <div class="artifact-won-close">
+                    <img src="img/close.png" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="boss">
+            <div class="fight-character"><img src="img/asuna.png" alt=""></div>
+            <div class="fight-course">
+                <div class="fight-time">
+                    <p class="xd">czas</p>
+                    <div class="fight-time-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-hp">
+                    <p class="xd">hp</p>
+                    <div class="fight-hp-value">
+                        <div class="fight-value-curtain"></div>
+                        <p>200/200</p>
+                    </div>
+                </div>
+                <div class="fight-start">
+                    <div class="crossed-swords">
+                        <img src="img/battleicon.png" alt="">
+                    </div>
+                    <p>Atakuj !</p>
+                </div>
+            </div>
+            <div class="fight-monster-character">
+                <img src="" alt="">
+                <div class="monster-curtain"></div>
+            </div>
+            <div class="fight-close"><img src="img/close.png" alt=""></div>
+            <div class="fight-result-curtain"></div>
+            <div class="fight-result-win">
+                <p class="win">Wygrałeś !</p>
+                <p class="exp-gain">Zdobyłeś <span>10</span> doświadczenia</p>
+                <p class="money-gain">Zdobyłeś <span>10</span> złotych monet</p>
+                <div class="attack-close attack-close-boss">Zakończ Walkę</div>
+            </div>
+            <div class="fight-result-loss">
+                <p class="loss">Przegrałeś !</p>
+                <div class="attack-again">Spróbuj Ponownie</div>
+                <div class="attack-close">Zakończ Walkę</div>
+            </div>
+            <div class="artifact-gain">
+                <h2>Artefakt!</h2>
+                <p class="artifact-gain">Pierścień Władcy Ognia</p>
+                <div class="artifact-won-container">
+                    <img src="" alt="">
+                </div>
+                <div class="artifact-won-close">
+                    <img src="img/close.png" alt="">
+                </div>
+            </div>
+        </article>
+
+
+
+        <div class="inst-battle-curtain"></div>
+        <div class="instruction-battle">
+            <h1>samouczek - walka</h1>
+            <div class="instruction-image"><img src="img/akichiko.png" alt=""></div>
+            <div class="instruction-close"><img src="img/close.png" alt=""></div>
+            <div class="instruction-next"><img src="img/backicon.png" alt=""></div>
+            <div class="dots dot1 active" data-id="1"></div>
+            <div class="dots dot2" data-id="2"></div>
+            <div class="dots dot3" data-id="3"></div>
+            <div class="dots dot4" data-id="4"></div>
+            <div class="inst instruction-battleoverall active" data-key="1">
+                <h2>Walka</h2>
+                <p>Aby rozpocząć walkę kliknij przycisk ze skrzyżowanymi mieczami. Po kliknięciu zacznie się odliczać czas, i odblokuje się możliwość atakowania. Aby zaatakować po prostu kliknij w potwora. Walcząc i pokonując potwory otrzymujesz doświadczenie i złote monety. W zależności czy zwyciężysz  mooba, przejdziesz dungeon czy pokonasz bossa, nagroda będzie inna. Jeśli jednak zdarzy Ci się przegrać walkę, nie otrzymasz doświadczenia ani złota, ale też nie ma z tego powodu żadnych większych konsekwencji.</p>
+            </div>
+            <div class="inst instruction-moob" data-key="2">
+                <h2>mooby</h2>
+                <p>Mooby to potwory, które najłatwiej pokonać. Nie mają za wiele HP, ani uciekający czas nie jest kłopotem. Walka trwa maksymalnie 10 sekund, więc Mooby to najlepszy sposób na zbieranie doświadczenia. Po zwycięstwie otrzymasz również złote monety, ale nie za wiele.</p>
+            </div>
+            <div class="inst instruction-dungeon" data-key="3">
+                <h2>dungeony</h2>
+                <p>Dungeony to najdłuższa forma walki. Przejście dungeona nie powinno być kłopotem, lecz jest czasochłonne. Natomiast po zwycięstwie otrzymasz pokaźne ilości złota i trochę doświadczenia.</p>
+            </div>
+            <div class="inst instruction-boss" data-key="4">
+                <h2>boss</h2>
+                <p>Boss to najtrudniejszy przeciwnik w grze. Jest ich łącznie 10, tyle ile pięter. Doświadczenie i złoto zdobyte z nich nie jest tak ważne, jak przejście do kolejnego piętra, gdyż po ukończeniu 10 piętra i pokonaniu ostatniego bossa gra się zakończy i zostaniesz uwolniony ze świata Sword Art Online. Powodzenia!</p>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="lvl-curtain"></div>
+    <div class="no-attack">
+       <p>W drodzę na front przypomniałeś sobie, że nie zabrałeś broni ze swojego domu! Bez niej może Ci być ciężko w walce z potworami. Jesteś <span class="text5"></span>, że poradzisz sobie bez niej?</p>
+        <div class="noattack-back">Wróć</div>
+        <div class="noattack-go">Idź dalej</div>
+    </div>
+    <div class="lvl-information">
+        <div class="lvl-close"><img src="img/close.png" alt=""></div>
+        <p>Osiągnąłeś poziom <span>10</span> !</p>
+    </div>
+    <div class="not-enought-money">
+        <div class="not-enought-money-close"><img src="img/close.png" alt=""></div>
+        <p>Masz za mało złotych monet</p>
+    </div>
+    <div class="instruction-all unactive">
+        <h1>Samouczek</h1>
+        <div class="instruction-image"><img src="img/akichiko.png" alt=""></div>
+        <div class="instruction-close"><img src="img/close.png" alt=""></div>
+        <p>Jestem Kayaba Akichiko, a to moja gra: Sword Art Online! Logując się do niej utraciłeś możliwość wylogowania się, co oznacza, że jedyną drogą ucieczki z tej gry jest jej przejście. Aby ukończyć Sword Art Online musisz pokonać ostatniego Bossa, który czeka na ciebie na 10 piętrze. Problem polega na tym, że dojście do niego wiąże się z pokonaniem wszystkich pozostałych bossów niższych pięter. Nie poddawaj się, nie zostawiłem Cię bez żadnej nadzieji. Zdobywaj doświadczenie i złote monety, by kupic potrzebne przedmioty do ukończenia gry! Myslę, że tyle informacji potrzebujesz na ten moment. Powodzenia graczu i witaj w świecie Sword Art Online!</p>
+    </div>
+    <div class="ending">
+        <div class="scroll-bar">
+            <h1>Koniec gry !!!</h1>
+            <p class="ending-text"></p>
+            <div class="ending-stats">
+                <h2>Końcowe statystyki</h2>
+                <p class="ending-lvl-earned">Zdobyty poziom :<span>100</span></p>
+                <p class="ending-exp-earned">Zdobyte doświadczenie :<span>100</span></p>
+                <p class="ending-money-earned">Ilość zdobytych złotych monet :<span>100</span></p>
+                <p class="ending-weapons-bought">Ilość posiadanych mieczy :<span>100</span></p>
+                <p class="ending-artifacts-earned">Ilość zdobytych artefaktów :<span>100</span></p>
+                <p class="ending-moobs-defeated">Pokonane Mooby :<span>100</span></p>
+                <p class="ending-dungeons-finished">Ukończone Dungeony :<span>100</span></p>
+                <p class="ending-bosses-defeated">Ilość pokonanych Bossów :<span>100</span></p>
+                <p class="ending-losses">Ilość porażek :<span>100</span></p>
+                <p class="ending-hits">Ilość zadanych ciosów :<span>100</span></p>
+                <p class="ending-criticals">Ilość zadanych ciosów krytycznych :<span>100</span></p>
+                <p class="ending-damage">Ilość zadanych obrażeń :<span>100</span></p>
+                <p class="ending-upgrades">Ilość ulepszeń wszystkich broni :<span>100</span></p>
+                <p class="ending-skins-bought">Ilość posiadanych outfitów :<span>100</span></p>
+                <p class="ending-achievements-got">Ilość zdobytych osiągnięć :<span>100</span></p>
+                <p class="ending-dame-time">Czas ukończenia gry <span><span class="hours">10 </span>: <span class="minutes">10 </span>: <span class="seconds">10</span></span></p>
+                </div>
+            <div class="ending-thanks">
+                <h1>Autorzy</h1>
+                <div class="question">
+                    <h2>Question Mark - Dziurman Sławomir</h2>
+                    <p>front-end<br>mechanika<br>dobór muzyki<br>trailer - scenariusz</p>
+                </div>
+                <div class="przemek">
+                    <h2>Przemciosss - Przybylski Przemysław</h2>
+                    <p>grafika - obróbka<br>dźwięk - obróbka<br>trailer - montarz, scenariusz</p>
+                </div>
+                <div class="popek">
+                    <h2>PpekKOX - Wróblewski Andrzej</h2>
+                    <p>balans<br>mechanika<br>główny tester</p>
+                </div>
+            </div>
+            <div class="ending-logo">
+                <img src="img/coin2.png" alt="">
+                <p>Question mark's games studio</p>
+            </div>
+            <div class="ending-buttons">
+                <div class="ending-end">
+                    <p class="endButton hover">Zakończ</p>
+                </div>
+                <div class="ending-end">
+                    <p class="sendResults hover">Prześlij wynik</p>
+                    <p class="resultsSent none">Wynik przesłany</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sendingResultsCurtain none"></div>
+    <div class="sendingResults">
+        <div class="sendingResultsClose"><img src="img/close.png" alt=""></div>
+        <input type="text" class="usernameInp" placeholder="Podaj Nick">
+        <p class="sendResults2 hover">Prześlij wynik</p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
