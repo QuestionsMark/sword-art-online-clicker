@@ -13,7 +13,7 @@
   <p align="center">
     SAO Clicker to gra przeglądarkowa, która nigdzie się nie zapisuje, co oznacza, że jeśli odświeżysz stronę, to automatycznie cały Twój postęp się zresetuje i gra zacznie się od nowa. W sumie jakby na to nie patrzeć, jest to ciekawa mechanika, gdy zna się historię SAO i ruzumie na czym polega fenomen tego anime. Zacząłeś grać? To grasz do końca, inaczej umierasz. W każdym razie pamiętaj o tym i powodzenia! Miłej gry!
     <br />
-    [Zobacz Trailer][trailer-url]
+    <a href="https://sao-clicker.animark.pl">Zobacz trailer!</a>
     <br />
     <br />
   </p>
