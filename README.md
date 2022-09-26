@@ -40,7 +40,7 @@
 
 ![city]
 
-Gra zaczyna się od wyboru postaci. Mamy do wyboru Asunę, bądź Kirito. Po wybraniu postaci gra przemosi nas do miasta, które jest nawigacją po świecie SAO Clickera.
+Gra zaczyna się od wyboru postaci. Mamy do wyboru Asunę, bądź Kirito. Po wybraniu postaci gra przenosi nas do miasta, które jest nawigacją po świecie SAO Clickera.
 
 ### Sklep Lizabeth
 
@@ -52,7 +52,7 @@ W sklepie Lizabeth możemy kupić broń, dzięki której pokonamy wszystkich bos
 
 ![home]
 
-Bezpiecznym miejscem w SAO Clicker jest dom, wktórym możemy przejrzeć swój ekwipunek, artefakty, ulepszyć broń, zobaczyć statystyki oraz osiągnięcia, a także zakupić i wybrać skina do swojej postaci.
+Bezpiecznym miejscem w SAO Clicker jest dom, w wktórym możemy przejrzeć swój ekwipunek, artefakty, ulepszyć broń, zobaczyć statystyki oraz osiągnięcia, a także zakupić i wybrać skina do swojej postaci.
 
 ### Ekwipunek
 
@@ -145,7 +145,7 @@ Walka z bossem jest pewnym krokiem milowym w ukończeniu gry. Aby ukończyć gr�
 [battle-field]: readme/battle-field.PNG
 [moob]: readme/moob.PNG
 [dungeon]: readme/dungeon.PNG
-[boss]: readme/achievements.PNG
+[boss]: readme/boss.PNG
 [equipment]: readme/equipment.PNG
 [artifacts]: readme/artifacts.PNG
 [upgrade]: readme/upgrade.PNG
