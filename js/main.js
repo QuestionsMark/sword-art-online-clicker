@@ -1,3 +1,4 @@
+const RESULTS_URL = 'http://localhost:3001'; // server adress
 const sectionPlayerStatistics = document.querySelector('section.player-statistics');
 const sectionStartCurtain = document.querySelector('section.curtain');
 const sectionStart = document.querySelector('section.start');
@@ -3256,7 +3257,7 @@ sendingResultsButton2.addEventListener('click', function () {
     }
     const completionTime = `${hours}:${minutes}:${seconds}`;
 
-    fetch('https://question-mark-project-anime.herokuapp.com/sword-art-online-clicker', {
+    fetch(RESULTS_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
