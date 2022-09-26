@@ -17,7 +17,7 @@
   </p>
 </div>
 
-[![JavaScript][javascript]][typescript-url]
+[![JavaScript][javascript]][javascript-url]
 
 <details>
   <summary>Spis treści</summary>
