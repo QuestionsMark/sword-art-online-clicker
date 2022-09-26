@@ -17,6 +17,8 @@
   </p>
 </div>
 
+[![HTML][html]][html-url]
+[![CSS][css]][css-url]
 [![JavaScript][javascript]][javascript-url]
 
 <details>
@@ -137,6 +139,10 @@ Walka z bossem jest pewnym krokiem milowym w ukończeniu gry. Aby ukończyć gr�
 [contributors-url]: https://github.com/QuestionsMark/sword-art-online-clicker/graphs/contributors
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/s%C5%82awomir-dziurman-75464b205/
+[html]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[html-url]: https://html.com/
+[css]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[css-url]: https://www.w3.org/Style/CSS/Overview.en.html
 [javascript]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 [javascript-url]: https://www.javascript.com/
 [city]: readme/city.PNG
