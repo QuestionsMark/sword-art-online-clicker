@@ -13,6 +13,8 @@
   <p align="center">
     SAO Clicker to gra przeglądarkowa, która nigdzie się nie zapisuje, co oznacza, że jeśli odświeżysz stronę, to automatycznie cały Twój postęp się zresetuje i gra zacznie się od nowa. W sumie jakby na to nie patrzeć, jest to ciekawa mechanika, gdy zna się historię SAO i ruzumie na czym polega fenomen tego anime. Zacząłeś grać? To grasz do końca, inaczej umierasz. W każdym razie pamiętaj o tym i powodzenia! Miłej gry!
     <br />
+    [Zobacz Trailer][trailer-url]
+    <br />
     <br />
   </p>
 </div>
@@ -158,3 +160,4 @@ Walka z bossem jest pewnym krokiem milowym w ukończeniu gry. Aby ukończyć gr�
 [skins]: readme/skins.PNG
 [statistics]: readme/statistics.PNG
 [achievements]: readme/achievements.PNG
+[trailer-url]: https://www.youtube.com/watch?v=dchkT0uUfhs
